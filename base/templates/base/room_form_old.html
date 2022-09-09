@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+	<form method="POST">
+		{% csrf_token %}   <!-- protects from some attacks..when we r sending post req -->
+		{{form.as_p}}
+		<input type="submit" value="Submit">
+		
+	</form>
+		
+</div>
+
+
+{% endblock content %}
